@@ -30,9 +30,9 @@ B6K <- crop(B6K, kml25)}
 
 # Aggregate so that each pixel includes both veg and soil components for TSEB model
   # Formula: 
-    # Ground sample distance = 0.6m at 90m, row width = 6.4m, so 6.4/0.6 = 10.66 (factor = 10.66)
+    # Ground sample distance = 0.0388m at 90m, row width = 6.4m, so 6.4/0.0388 = 164.94 (factor = 164.94)
 
-B6K_agg <- aggregate(B6K, fact=10.66, fun=mean)
+B6K_agg <- aggregate(B6K, fact=164.94, fun=mean)
 
 # Quality check
 plot(B6K_agg, axes = FALSE, col=viridis(256), main = "B6K")
